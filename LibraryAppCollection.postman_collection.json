@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "1391b1c6-8a47-4684-a848-d2207962240f",
+		"name": "LibraryAppCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20638391"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "LOGİN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Muratkscn\",\r\n  \"password\": \"Deneme1.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4200/api/Account/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"Account",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGOUT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4200/api/Account/logout",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"Account",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGİSTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4200/api/Account/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"Account",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Library",
+			"item": [
+				{
+					"name": "GETBOOKS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNTg3MzhjLTkyYWQtNDljMC1iZGVlLTg2YmFjYTE2ZTkwZiIsIm5iZiI6MTY1NjA4NjQzOSwiZXhwIjoxNjU2MDkwMDM5LCJpYXQiOjE2NTYwODY0Mzl9.AuuDEZcQUsCAAU_DcTbyBBW_jpbV5e-bvLsySAbFiiM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4200/api/Books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"Books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNTg3MzhjLTkyYWQtNDljMC1iZGVlLTg2YmFjYTE2ZTkwZiIsIm5iZiI6MTY1NjA4NjQzOSwiZXhwIjoxNjU2MDkwMDM5LCJpYXQiOjE2NTYwODY0Mzl9.AuuDEZcQUsCAAU_DcTbyBBW_jpbV5e-bvLsySAbFiiM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 4,\r\n  \"userId\": \"fd58738c-92ad-49c0-bdee-86baca16e90f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4200/api/Books/addbook",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"Books",
+								"addbook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMyLibrary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNTg3MzhjLTkyYWQtNDljMC1iZGVlLTg2YmFjYTE2ZTkwZiIsIm5iZiI6MTY1NjA4NjQzOSwiZXhwIjoxNjU2MDkwMDM5LCJpYXQiOjE2NTYwODY0Mzl9.AuuDEZcQUsCAAU_DcTbyBBW_jpbV5e-bvLsySAbFiiM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"fd58738c-92ad-49c0-bdee-86baca16e90f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4200/api/Books/getmylibrary",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"Books",
+								"getmylibrary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeliveryBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNTg3MzhjLTkyYWQtNDljMC1iZGVlLTg2YmFjYTE2ZTkwZiIsIm5iZiI6MTY1NjA4NjQzOSwiZXhwIjoxNjU2MDkwMDM5LCJpYXQiOjE2NTYwODY0Mzl9.AuuDEZcQUsCAAU_DcTbyBBW_jpbV5e-bvLsySAbFiiM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 1,\r\n  \"userId\": \"fd58738c-92ad-49c0-bdee-86baca16e90f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4200/api/Books/deliverybook",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"Books",
+								"deliverybook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReedBookHistory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNTg3MzhjLTkyYWQtNDljMC1iZGVlLTg2YmFjYTE2ZTkwZiIsIm5iZiI6MTY1NjA4NjQzOSwiZXhwIjoxNjU2MDkwMDM5LCJpYXQiOjE2NTYwODY0Mzl9.AuuDEZcQUsCAAU_DcTbyBBW_jpbV5e-bvLsySAbFiiM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"fd58738c-92ad-49c0-bdee-86baca16e90f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4200/api/Books/readbookshistory",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"Books",
+								"readbookshistory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,43 @@
+﻿@model List<LibraryBookModel>
+
+<div class="text-center">
+    <h4 class="display-4">Sizin Kütüpheneniz</h4>
+</div>
+
+<div class="row">
+
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="@item.BookImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.BookName</h5>
+                        <p class="card-text">Kitap hakkında kısmı eklenicek</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Kitap alım zamanı:  @item.BarrowingDate</li>
+                        <li class="list-group-item">Kitap son teslim zamanı:  @item.BookDeadline</li>
+
+                    </ul>
+                    <div class="card-body">
+                        <form asp-controller="Home" asp-action="DeleteBookFromUserLibrary">
+                            <input type="hidden" name="bookId" value="@item.BookId" />
+                            <input type="submit" class="btn btn-primary" value="İade Et" />
+                        </form>
+
+
+                    </div>
+                </div>
+
+            </div>
+        }
+
+
+    }
+
+
+</div>
+
